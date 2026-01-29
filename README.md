@@ -49,6 +49,19 @@ Alerts are triggered in the following scenarios:
    ```
    This script simulates ElevenLabs returning 503 errors, demonstrates retries, circuit breaker tripping, health check monitoring, and automatic recovery.
 
+## Visual Dashboard (Optional)
+
+A Streamlit-based dashboard is provided in `streamlit_app.py`. It provides a visual interface for:
+- Monitoring Circuit Breaker states.
+- Injecting failures (simulating 503s).
+- Monitoring live logs and alerts.
+
+To run locally:
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
 ## Example Logs
 
 Structured logs are saved to `app_logs.json`. General execution logs are in `app.log`.
