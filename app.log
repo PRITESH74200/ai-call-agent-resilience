@@ -1,0 +1,100 @@
+2026-01-29 13:44:02,692 [INFO] src.monitoring.health_check: Registered health check for ElevenLabs
+2026-01-29 13:44:02,693 [INFO] src.monitoring.health_check: Registered health check for LLMProvider
+2026-01-29 13:44:02,694 [INFO] src.monitoring.health_check: Health check monitoring started.
+2026-01-29 13:44:02,694 [INFO] src.app: AI Call Agent Started
+2026-01-29 13:44:02,697 [INFO] src.app: --- Processing Call for: Alice ---
+2026-01-29 13:44:02,705 [INFO] src.app: LLM Response: AI response to: Hello Alice
+2026-01-29 13:44:02,708 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.22 seconds...
+2026-01-29 13:44:07,715 [WARNING] src.monitoring.health_check: Health status changed for ElevenLabs: UNHEALTHY
+2026-01-29 13:44:07,926 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.08 seconds...
+2026-01-29 13:44:18,009 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 21.38 seconds...
+2026-01-29 13:44:39,394 [ERROR] src.core.resilience.retry: Service ElevenLabs failed after 3 retries. Final error: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:44:39,410 [ERROR] src.app: Transient error persisted after retries for Alice: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:44:39,410 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Call Failed after Retries - Service issues prevented call for Alice
+2026-01-29 13:44:39,413 [INFO] src.app: --- Processing Call for: Bob ---
+2026-01-29 13:44:39,428 [INFO] src.app: LLM Response: AI response to: Hello Bob
+2026-01-29 13:44:39,431 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.07 seconds...
+2026-01-29 13:44:44,506 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.03 seconds...
+2026-01-29 13:44:54,536 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 20.83 seconds...
+2026-01-29 13:45:15,394 [ERROR] src.core.resilience.retry: Service ElevenLabs failed after 3 retries. Final error: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:45:15,405 [ERROR] src.app: Transient error persisted after retries for Bob: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:45:15,406 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Call Failed after Retries - Service issues prevented call for Bob
+2026-01-29 13:45:15,411 [INFO] src.app: --- Processing Call for: Charlie ---
+2026-01-29 13:45:15,419 [INFO] src.app: LLM Response: AI response to: Hello Charlie
+2026-01-29 13:45:15,422 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.04 seconds...
+2026-01-29 13:45:20,468 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.19 seconds...
+2026-01-29 13:45:30,681 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 20.56 seconds...
+2026-01-29 13:45:51,244 [ERROR] src.core.resilience.retry: Service ElevenLabs failed after 3 retries. Final error: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:45:51,245 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.CLOSED -> CircuitState.OPEN
+2026-01-29 13:45:51,246 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Circuit Breaker OPEN for ElevenLabs - The service ElevenLabs has hit the failure threshold and is now disabled.
+2026-01-29 13:45:51,253 [ERROR] src.app: Transient error persisted after retries for Charlie: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:45:51,254 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Call Failed after Retries - Service issues prevented call for Charlie
+2026-01-29 13:45:52,755 [WARNING] src.monitoring.health_check: Health status changed for ElevenLabs: HEALTHY
+2026-01-29 13:46:02,258 [INFO] src.app: --- Processing Call for: David ---
+2026-01-29 13:46:02,264 [INFO] src.app: LLM Response: AI response to: Hello David
+2026-01-29 13:46:02,268 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.OPEN -> CircuitState.HALF_OPEN
+2026-01-29 13:46:02,270 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.HALF_OPEN -> CircuitState.CLOSED
+2026-01-29 13:46:02,271 [ERROR] src.monitoring.alerts: ALERT [INFO]: Circuit Breaker CLOSED for ElevenLabs - The service ElevenLabs has recovered.
+2026-01-29 13:46:02,292 [INFO] src.app: Audio Generated: Speech audio for: AI response to: Hello David
+2026-01-29 13:46:02,293 [INFO] src.app: Call successfully completed for David
+2026-01-29 13:46:02,758 [INFO] src.app: AI Call Agent Stopped
+2026-01-29 13:47:05,204 [INFO] src.monitoring.health_check: Registered health check for ElevenLabs
+2026-01-29 13:47:05,207 [INFO] src.monitoring.health_check: Registered health check for LLMProvider
+2026-01-29 13:47:05,209 [INFO] src.monitoring.health_check: Health check monitoring started.
+2026-01-29 13:47:05,210 [INFO] src.app: AI Call Agent Started
+2026-01-29 13:47:05,211 [INFO] src.app: --- Processing Call for: Alice ---
+2026-01-29 13:47:05,218 [INFO] src.app: LLM Response: AI response to: Hello Alice
+2026-01-29 13:47:05,221 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.36 seconds...
+2026-01-29 13:47:10,209 [WARNING] src.monitoring.health_check: Health status changed for ElevenLabs: UNHEALTHY
+2026-01-29 13:47:10,587 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.31 seconds...
+2026-01-29 13:47:20,894 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 20.07 seconds...
+2026-01-29 13:47:40,965 [ERROR] src.core.resilience.retry: Service ElevenLabs failed after 3 retries. Final error: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:47:40,969 [ERROR] src.app: Transient error persisted after retries for Alice: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:47:40,970 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Call Failed after Retries - Service issues prevented call for Alice
+2026-01-29 13:47:41,008 [INFO] src.app: --- Processing Call for: Bob ---
+2026-01-29 13:47:41,016 [INFO] src.app: LLM Response: AI response to: Hello Bob
+2026-01-29 13:47:41,021 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.26 seconds...
+2026-01-29 13:47:46,279 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.72 seconds...
+2026-01-29 13:47:57,037 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 20.09 seconds...
+2026-01-29 13:48:17,131 [ERROR] src.core.resilience.retry: Service ElevenLabs failed after 3 retries. Final error: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:48:17,137 [ERROR] src.app: Transient error persisted after retries for Bob: ElevenLabs is currently down (Simulated 503)
+2026-01-29 13:48:17,139 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Call Failed after Retries - Service issues prevented call for Bob
+2026-01-29 13:48:17,141 [INFO] src.app: --- Processing Call for: Charlie ---
+2026-01-29 13:48:17,155 [INFO] src.app: LLM Response: AI response to: Hello Charlie
+2026-01-29 13:48:17,160 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 5.34 seconds...
+2026-01-29 13:48:22,502 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 10.15 seconds...
+2026-01-29 13:48:32,658 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 20.87 seconds...
+2026-01-29 13:55:20,526 [INFO] src.monitoring.health_check: Registered health check for ElevenLabs
+2026-01-29 13:55:20,528 [INFO] src.monitoring.health_check: Registered health check for LLMProvider
+2026-01-29 13:55:20,531 [INFO] src.monitoring.health_check: Health check monitoring started.
+2026-01-29 13:55:20,531 [INFO] src.app: AI Call Agent Started
+2026-01-29 13:55:20,537 [INFO] src.app: --- Processing Call for: Alice ---
+2026-01-29 13:55:20,545 [INFO] src.app: LLM Response: AI response to: Hello Alice
+2026-01-29 13:55:20,551 [WARNING] src.core.resilience.retry: Attempt 1 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 1.04 seconds...
+2026-01-29 13:55:21,595 [WARNING] src.core.resilience.retry: Attempt 2 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 2.18 seconds...
+2026-01-29 13:55:23,781 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.CLOSED -> CircuitState.OPEN
+2026-01-29 13:55:23,785 [ERROR] src.monitoring.alerts: ALERT [CRITICAL]: Circuit Breaker OPEN for ElevenLabs - The service ElevenLabs has hit the failure threshold and is now disabled.
+2026-01-29 13:55:23,789 [WARNING] src.core.resilience.retry: Attempt 3 for ElevenLabs failed: ElevenLabs is currently down (Simulated 503). Retrying in 4.18 seconds...
+2026-01-29 13:55:25,531 [WARNING] src.monitoring.health_check: Health status changed for ElevenLabs: UNHEALTHY
+2026-01-29 13:55:27,971 [ERROR] src.core.resilience.retry: Non-retryable error in ElevenLabs: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:27,976 [WARNING] src.app: Service unavailable due to open circuit: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:27,976 [ERROR] src.monitoring.alerts: ALERT [WARNING]: Call Blocked - Circuit is open. Skipping call for Alice
+2026-01-29 13:55:27,983 [INFO] src.app: --- Processing Call for: Bob ---
+2026-01-29 13:55:28,015 [INFO] src.app: LLM Response: AI response to: Hello Bob
+2026-01-29 13:55:28,027 [ERROR] src.core.resilience.retry: Non-retryable error in ElevenLabs: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:28,030 [WARNING] src.app: Service unavailable due to open circuit: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:28,031 [ERROR] src.monitoring.alerts: ALERT [WARNING]: Call Blocked - Circuit is open. Skipping call for Bob
+2026-01-29 13:55:28,039 [INFO] src.app: --- Processing Call for: Charlie ---
+2026-01-29 13:55:28,043 [INFO] src.app: LLM Response: AI response to: Hello Charlie
+2026-01-29 13:55:28,046 [ERROR] src.core.resilience.retry: Non-retryable error in ElevenLabs: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:28,048 [WARNING] src.app: Service unavailable due to open circuit: Circuit Breaker for ElevenLabs is OPEN
+2026-01-29 13:55:28,049 [ERROR] src.monitoring.alerts: ALERT [WARNING]: Call Blocked - Circuit is open. Skipping call for Charlie
+2026-01-29 13:55:30,533 [WARNING] src.monitoring.health_check: Health status changed for ElevenLabs: HEALTHY
+2026-01-29 13:55:39,051 [INFO] src.app: --- Processing Call for: David ---
+2026-01-29 13:55:39,057 [INFO] src.app: LLM Response: AI response to: Hello David
+2026-01-29 13:55:39,061 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.OPEN -> CircuitState.HALF_OPEN
+2026-01-29 13:55:39,062 [INFO] src.core.resilience.circuit_breaker: Circuit Breaker for ElevenLabs changed state: CircuitState.HALF_OPEN -> CircuitState.CLOSED
+2026-01-29 13:55:39,062 [ERROR] src.monitoring.alerts: ALERT [INFO]: Circuit Breaker CLOSED for ElevenLabs - The service ElevenLabs has recovered.
+2026-01-29 13:55:39,080 [INFO] src.app: Audio Generated: Speech audio for: AI response to: Hello David
+2026-01-29 13:55:39,080 [INFO] src.app: Call successfully completed for David
+2026-01-29 13:55:40,548 [INFO] src.app: AI Call Agent Stopped

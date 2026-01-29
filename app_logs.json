@@ -1,0 +1,43 @@
+{"timestamp": "2026-01-29T13:44:02.698736", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:02.702736", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:02.705737", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:39.395880", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "ElevenLabs is currently down (Simulated 503)", "error_type": "ServiceUnavailableError", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:39.413145", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:39.426170", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:44:39.428188", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:45:15.402752", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "ElevenLabs is currently down (Simulated 503)", "error_type": "ServiceUnavailableError", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:45:15.411987", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:45:15.417076", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:45:15.420081", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:45:51.248753", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "ElevenLabs is currently down (Simulated 503)", "error_type": "ServiceUnavailableError", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:46:02.259100", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:46:02.261102", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:46:02.265191", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:46:02.274688", "service_name": "ElevenLabs", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:05.212336", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:05.215392", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:05.219407", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:40.966701", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "ElevenLabs is currently down (Simulated 503)", "error_type": "ServiceUnavailableError", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:41.008592", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:41.011591", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:47:41.016938", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:48:17.133916", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "ElevenLabs is currently down (Simulated 503)", "error_type": "ServiceUnavailableError", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:48:17.142408", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:48:17.145406", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:48:17.156110", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:20.538279", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:20.542288", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:20.546273", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:27.972575", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "Circuit Breaker for ElevenLabs is OPEN", "error_type": "CircuitBreakerOpenError", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:27.984573", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:27.987575", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:28.018571", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:28.028476", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "Circuit Breaker for ElevenLabs is OPEN", "error_type": "CircuitBreakerOpenError", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:28.041488", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:28.042944", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:28.045374", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:28.046389", "service_name": "ElevenLabs", "event_type": "REQUEST_FAILURE", "error": "Circuit Breaker for ElevenLabs is OPEN", "error_type": "CircuitBreakerOpenError", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:39.052960", "service_name": "LLMProvider", "event_type": "REQUEST_START", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:39.054959", "service_name": "LLMProvider", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}
+{"timestamp": "2026-01-29T13:55:39.059649", "service_name": "ElevenLabs", "event_type": "REQUEST_START", "circuit_state": "OPEN"}
+{"timestamp": "2026-01-29T13:55:39.072642", "service_name": "ElevenLabs", "event_type": "REQUEST_SUCCESS", "circuit_state": "CLOSED"}

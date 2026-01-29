@@ -1,0 +1,26 @@
+{
+  "services": {
+    "eleven_labs": {
+      "retry": {
+        "max_retries": 3,
+        "initial_delay": 1,
+        "backoff_factor": 2
+      },
+      "circuit_breaker": {
+        "failure_threshold": 3,
+        "recovery_timeout": 5
+      }
+    },
+    "llm": {
+      "retry": {
+        "max_retries": 2,
+        "initial_delay": 1,
+        "backoff_factor": 2
+      },
+      "circuit_breaker": {
+        "failure_threshold": 2,
+        "recovery_timeout": 5
+      }
+    }
+  }
+}
